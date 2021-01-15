@@ -3,7 +3,82 @@
     height: 240px;
 }
 
-.component-header i {
-    color: #ccc;
- 
+.icon-box {
+    display: flex;
 }
+
+.component-logo {
+    margin: 10px 0 0 10px;
+}
+
+.component-icons {
+    margin: 5px 15px 0 0;
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: auto 15px 3px auto;
+}
+
+.component-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-icons {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-search {
+    margin: 20px 0;
+    text-align: center;
+    border: none;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.input-search {
+    width: 70%;
+    border: none;
+    box-sizing: border-box;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    text-align: center;
+    background: none;
+    color: #fff;
+    font-size: 36px;
+}
+
+.input-search::placeholder {
+    font-size: 36px;
+    color: #fff;
+}
+
+.btn-sentence {
+    margin-left: 17.5%;
+    overflow-x: scroll;
+    width: 70%;
+}
+
+.btn-sentence ul, li {
+    padding: 0;
+    color: #ddd;
+    display: flex;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.btn-sentence button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* @media only screen and (max-width: 425px) {
+    .btn-sentence {
+        min-width: 50%;
+    }
+} */
