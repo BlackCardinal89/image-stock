@@ -1,14 +1,21 @@
-import './App.css';
 import React, { PureComponent } from 'react';
-import Header from './components/Header/Header.jsx'
+import Header from './components/Header/Header.jsx';
+import Content from './components/Content/Content.jsx';
+import './App.css';
+// import { createApi } from 'unsplash-js';
 
-export default class App extends PureComponent { 
-    
-  render() {
-    return (
-      <div>
-        <Header />
-      </div>
-    )
-  }
+function App() {
+
+  // const unsplash = createApi({
+  //   accessKey: 'MY_ACCESS_KEY',
+  //   fetch: nodeFetch,
+  // })
+  return (
+    <div>
+      <Header />
+      <Content />
+    </div>
+  )
 }
+
+export default App
