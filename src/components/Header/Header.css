@@ -12,25 +12,17 @@
 }
 
 .component-icons {
-<<<<<<< HEAD
     margin: 5px 15px 0 0;
-=======
-    margin: 10px 10px 0 0;
->>>>>>> 263c24ba60d1f2493cc84389b8f7aa5d0d3b7237
     order: 1;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-<<<<<<< HEAD
     margin: auto 15px 3px auto;
 }
 
 .component-icons img {
     width: 24px;
     height: 24px;
-=======
-    margin: auto 0 0 auto;
->>>>>>> 263c24ba60d1f2493cc84389b8f7aa5d0d3b7237
 }
 
 .btn-icons {
@@ -65,18 +57,23 @@
     color: #fff;
 }
 
-.btn-sentence {
-<<<<<<< HEAD
+.scrolling-wrapper {
     margin-left: 17.5%;
     overflow-x: scroll;
     width: 70%;
-=======
-    width: 70%;
-    margin-left: 17.5%;
->>>>>>> 263c24ba60d1f2493cc84389b8f7aa5d0d3b7237
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
 
-.btn-sentence ul, li {
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+
+.scrolling-wrapper ul, li {
     padding: 0;
     color: #ddd;
     display: flex;
@@ -84,18 +81,8 @@
     font-size: 15px;
 }
 
-.btn-sentence button{
+.scrolling-wrapper button{
     background: none;
     border: none;
     cursor: pointer;
-<<<<<<< HEAD
 }
-
-/* @media only screen and (max-width: 425px) {
-    .btn-sentence {
-        min-width: 50%;
-    }
-} */
-=======
-}
->>>>>>> 263c24ba60d1f2493cc84389b8f7aa5d0d3b7237

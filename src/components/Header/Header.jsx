@@ -1,17 +1,21 @@
-import React, { PureComponent } from 'react';
+import React, { useState } from 'react';
 import favorite_24px from '../assets/favorite_24px.png';
-import unsplash from '../assets/unsplash.png';
+import logo from '../assets/logo.png';
 import history_24px from '../assets/history_24px.png';
 import './Header.css';
 
-export default class Header extends PureComponent {
-  render() {
+
+export default function Header() {
+
+  const [query, setQuery] = useState("");
+
+
     return (
       <header className="component-header">
         <div className="icon-box">
           <div className="component-logo">
             <button className="btn-icons">
-              <img src={unsplash} alt="" />
+              <img src={logo} alt="" />
             </button>
           </div>
           <div className="component-icons">
@@ -24,15 +28,17 @@ export default class Header extends PureComponent {
           </div>
         </div>
         <div className="btn-search">
-          <form action="">
+          <form className="form">
             <input
               className="input-search"
               type="text"
               placeholder="Поиск"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
             />
           </form>
         </div>
-        <div className="btn-sentence">
+        <div className="scrolling-wrapper">
           <ul>
             <button>
               <li>Wallpapers</li>
@@ -46,9 +52,27 @@ export default class Header extends PureComponent {
             <button>
               <li>Background</li>
             </button>
+            <button>
+              <li>Health</li>
+            </button>
+            <button>
+              <li>Street photo</li>
+            </button>
+            <button>
+              <li>Travel</li>
+            </button>
+            <button>
+              <li>Animals</li>
+            </button>
+            <button>
+              <li>Art & Culture</li>
+            </button>
+            <button>
+              <li>History</li>
+            </button>
           </ul>
         </div>
       </header>
     );
   }
-}
+

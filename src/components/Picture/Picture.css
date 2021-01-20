@@ -1,7 +1,17 @@
+.list {
+    display: block;
+}
+
+.grid {
+    display: flex;
+   flex-wrap: wrap;
+}
+
 .photo-content {
     text-align: center;   
     position: relative;
     overflow: hidden;
+    margin: auto;
 }
 
 .photo-content:hover .picture-specifications {

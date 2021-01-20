@@ -5,7 +5,7 @@ import download_24px from "../assets/download_24px.png";
 import maximize_2 from "../assets/maximize-2.png";
 import "./Picture.css";
 
-function Picture() {
+function Picture(props) {
   const unsplash = createApi({
     accessKey: "BRJzDmpI4J9H8KTIX7NuwWdjuJb74DCDDv1vwcxqGLA",
   });
@@ -21,8 +21,10 @@ function Picture() {
     fetchPhotos();
   });
 
+  const [like, setLike] = useState([]);
+
   return (
-    <div>
+    <div className={props.isGrid ? "grid" : "list"}>
       {photos.map((photo) => {
         return (
           <div className="photo-content" key={photo.id}>
@@ -37,7 +39,10 @@ function Picture() {
               <h3>@{photo.user.username}</h3>
             </div>
             <div className="photo-buttons">
-              <button className="info-buttons">
+              <button
+                onClick={() => setLike(like + 1)}
+                className="info-buttons"
+              >
                 <img src={favorite_24px} alt="" />
               </button>
               <button className="info-buttons">

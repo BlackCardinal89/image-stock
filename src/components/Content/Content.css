@@ -3,11 +3,7 @@
 }
 
 .sort-by {
-<<<<<<< HEAD
     margin: 60px auto 60px auto;
-=======
-    margin: 40px auto 25px auto;
->>>>>>> 263c24ba60d1f2493cc84389b8f7aa5d0d3b7237
     width: 25%;
     text-align: center;
     display: flex;
@@ -19,10 +15,6 @@
     border: none;
     cursor: pointer;
     outline: none;
-<<<<<<< HEAD
 }
 
 
-=======
-}
->>>>>>> 263c24ba60d1f2493cc84389b8f7aa5d0d3b7237
