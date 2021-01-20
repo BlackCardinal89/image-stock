@@ -12,17 +12,25 @@
 }
 
 .component-icons {
+<<<<<<< HEAD
     margin: 5px 15px 0 0;
+=======
+    margin: 10px 10px 0 0;
+>>>>>>> 263c24ba60d1f2493cc84389b8f7aa5d0d3b7237
     order: 1;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+<<<<<<< HEAD
     margin: auto 15px 3px auto;
 }
 
 .component-icons img {
     width: 24px;
     height: 24px;
+=======
+    margin: auto 0 0 auto;
+>>>>>>> 263c24ba60d1f2493cc84389b8f7aa5d0d3b7237
 }
 
 .btn-icons {
@@ -58,9 +66,14 @@
 }
 
 .btn-sentence {
+<<<<<<< HEAD
     margin-left: 17.5%;
     overflow-x: scroll;
     width: 70%;
+=======
+    width: 70%;
+    margin-left: 17.5%;
+>>>>>>> 263c24ba60d1f2493cc84389b8f7aa5d0d3b7237
 }
 
 .btn-sentence ul, li {
@@ -75,6 +88,7 @@
     background: none;
     border: none;
     cursor: pointer;
+<<<<<<< HEAD
 }
 
 /* @media only screen and (max-width: 425px) {
@@ -82,3 +96,6 @@
         min-width: 50%;
     }
 } */
+=======
+}
+>>>>>>> 263c24ba60d1f2493cc84389b8f7aa5d0d3b7237
