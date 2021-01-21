@@ -1,31 +1,16 @@
-import { useEffect, useState } from "react";
-import { createApi } from "unsplash-js";
+import { useState } from "react";
 import favorite_24px from "../assets/favorite_24px.png";
 import download_24px from "../assets/download_24px.png";
 import maximize_2 from "../assets/maximize-2.png";
 import "./Picture.css";
 
 function Picture(props) {
-  const unsplash = createApi({
-    accessKey: "BRJzDmpI4J9H8KTIX7NuwWdjuJb74DCDDv1vwcxqGLA",
-  });
-
-  const [photos, setPhotos] = useState([]);
-
-  const fetchPhotos = async () => {
-    const data = await unsplash.photos.list();
-    setPhotos(data.response.results);
-  };
-
-  useEffect(() => {
-    fetchPhotos();
-  });
 
   const [like, setLike] = useState([]);
 
   return (
     <div className={props.isGrid ? "grid" : "list"}>
-      {photos.map((photo) => {
+      {props.photos.map((photo) => {
         return (
           <div className="photo-content" key={photo.id}>
             <img
