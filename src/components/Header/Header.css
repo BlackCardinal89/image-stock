@@ -1,21 +1,4 @@
-@media (min-width: 768px) {
-    .header-name {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-        color: #fff;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
 
-@media (max-width: 768px) {
-    .header-name {
-        display: none;
-        margin: auto 0;
-    }
-}
 
 .component-header {
     background-color: #000;
@@ -83,7 +66,7 @@
 }
 
 .scrolling-wrapper {
-    margin-left: 16%;
+    margin-left: 15%;
     overflow-x: scroll;
     width: 70%;
     white-space: nowrap;
@@ -106,4 +89,38 @@
     background: none;
     border: none;
     cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .component-header {
+        height: 400px;
+    }
+    .header-name {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 8px;
+    }
+    .component-icons {
+        margin-right: 45px;  
+        margin-top: 50px; 
+    }
+    .component-logo {
+        margin-left: 45px;
+        margin-top: 50px;
+    }
+    .input-search {
+        margin-top: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-name {
+        display: none;
+        margin: auto 0;
+    }
 }

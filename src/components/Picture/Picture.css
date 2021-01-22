@@ -60,7 +60,6 @@
     left: 50%;
     margin-right: -45%;
     transform: translate(-45%, -55%);
-    /* display: none; */
 }
 
 .info-buttons {
@@ -72,4 +71,20 @@
     width: 34px;
     height: 34px;
     margin-right: 25px;
+}
+
+.button-top {
+    border: none;
+    background: none;
+    cursor: pointer;
+    float: right;
+    margin-right: 25px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 205px) {
+    .photo-buttons {
+        width: 200px;
+    }
 }

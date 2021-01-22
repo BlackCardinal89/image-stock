@@ -5,7 +5,9 @@ import logo from "../assets/logo.png";
 import history_24px from "../assets/history_24px.png";
 import "./Header.css";
 
+
 export default function Header(props) {
+  
   return (
     <header className="component-header">
       <div className="flex-icon">
@@ -13,11 +15,16 @@ export default function Header(props) {
           <div className="component-logo">
             <button className="btn-icons">
               <img src={logo} alt="" />
-            <h2 className="header-name">Image Stock</h2>
+              <h2 className="header-name">Image Stock</h2>
             </button>
           </div>
           <div className="component-icons">
-            <button className="btn-icons">
+            <button 
+              className="btn-icons"
+              onClick={() => {
+               
+              }}          
+            >
               <img src={favorite_24px} alt="" />
               <h4 className="header-name">Избранное</h4>
             </button>
