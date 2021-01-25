@@ -1,37 +1,44 @@
 import React from "react";
 import "unsplash-js";
-import favorite_24px from "../assets/favorite_24px.png";
 import logo from "../assets/logo.png";
-import history_24px from "../assets/history_24px.png";
+import favorite_24px from "../assets/favorite_24px.png";
+import shopping_cart from "../assets/shopping_cart.png";
 import "./Header.css";
-
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { routes } from "../../constants/routes";
 
 export default function Header(props) {
-  
   return (
     <header className="component-header">
       <div className="flex-icon">
         <div className="icon-box">
           <div className="component-logo">
-            <button className="btn-icons">
+            <Link
+              to={routes.home}
+              className="btn-icons"
+              style={{ textDecoration: "none" }}
+            >
               <img src={logo} alt="" />
               <h2 className="header-name">Image Stock</h2>
-            </button>
+            </Link>
           </div>
           <div className="component-icons">
-            <button 
+            <Link
+              to={routes.favorites}
               className="btn-icons"
-              onClick={() => {
-               
-              }}          
+              style={{ textDecoration: "none" }}
             >
               <img src={favorite_24px} alt="" />
               <h4 className="header-name">Избранное</h4>
-            </button>
-            <button className="btn-icons">
-              <img src={history_24px} alt="" />
-              <h4 className="header-name">История поиска</h4>
-            </button>
+            </Link>
+            <Link
+              to={routes.checkout}
+              className="btn-icons"
+              style={{ textDecoration: "none" }}
+            >
+              <img src={shopping_cart} alt="" />
+              <h4 className="header-name">Корзина</h4>
+            </Link>
           </div>
         </div>
       </div>
@@ -123,3 +130,15 @@ export default function Header(props) {
     </header>
   );
 }
+
+// const premadeQueries = ["History", "Art", "Basketball", "Tennis", "People"];
+
+// {
+//   premadeQueries.map((query, i) => {
+//     return (
+//       <button onClick={(e) => searchByQuery(query)} key={i}>
+//         <li>{query}</li>
+//       </button>
+//     );
+//   });
+// }

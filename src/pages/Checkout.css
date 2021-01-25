@@ -1,0 +1,7 @@
+.name-menu {
+    margin: 60px auto 60px auto;
+    width: 25%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { createApi } from "unsplash-js";
 import Header from "./components/Header/Header.jsx";
-import Content from "./components/Content/Content.jsx";
-import Picture from "./components/Picture/Picture.jsx";
 import "./App.css";
+import Home from "./pages/Home.jsx";
+import { Switch, Route } from "react-router-dom";
+import Favorites from "./pages/Favorites.jsx";
+import Checkout from "./pages/Checkout.jsx";
+import { routes } from "./constants/routes.js";
 
 function App() {
   const unsplash = createApi({
@@ -36,13 +39,12 @@ function App() {
     unsplash.search
       .getPhotos({
         query: query,
-        perPage: 50,
+        perPage: 99,
       })
       .then((data) => {
         setPhotos(data.response?.results);
       });
   };
-
 
   return (
     <div>
@@ -52,14 +54,17 @@ function App() {
         query={query}
         assignQuery={assignQuery}
       />
-      <Content 
-        isGrid={isGrid} 
-        toggleGrid={toggleGrid} 
-      />
-      <Picture 
-        isGrid={isGrid} 
-        photos={photos}
-      />
+      <Switch>
+        <Route exact path={routes.home}>
+          <Home isGrid={isGrid} toggleGrid={toggleGrid} photos={photos} />
+        </Route>
+        <Route path={routes.favorites}>
+          <Favorites />
+        </Route>
+        <Route path={routes.checkout}>
+          <Checkout />
+        </Route>
+      </Switch>
     </div>
   );
 }

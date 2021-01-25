@@ -1,14 +1,14 @@
 import { useState } from "react";
 import favorite_24px from "../assets/favorite_24px.png";
-import download_24px from "../assets/download_24px.png";
+import shopping_cart from "../assets/shopping_cart.png";
 import maximize_2 from "../assets/maximize-2.png";
 import arrow_up from "../assets/arrow_up.png";
+import { Link } from "react-router-dom";
 import "./Picture.css";
 
 function Picture(props) {
-  const [like, setLike] = useState([]);
 
-  const [download, setDownload] = useState([])
+  const [like, setLike] = useState([]);
 
   return (
     <div className={props.isGrid ? "grid" : "list"}>
@@ -38,20 +38,18 @@ function Picture(props) {
               <button 
                 className="info-buttons"
                 onClick={() => {
-                  setDownload(download + 1)
+                  
                 }}
               >
-                <img src={download_24px} alt="" />
+                <img src={shopping_cart} alt="" />
               </button>
             </div>
           </div>
         );
       })}
-      <button className="button-top">
-        <a href="#">
+      <Link to="/" className="button-top">
           <img src={arrow_up} alt="" />
-        </a>
-      </button>
+      </Link>
     </div>
   );
 }

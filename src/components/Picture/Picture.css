@@ -68,9 +68,15 @@
     cursor: pointer;
     outline: none;
     color: #fff;
+    margin-right: 25px;
     width: 34px;
     height: 34px;
-    margin-right: 25px;
+}
+
+.info-buttons img {
+    width: 34px;
+    height: 34px;
+    filter: brightness(1)
 }
 
 .button-top {
