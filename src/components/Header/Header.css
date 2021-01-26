@@ -90,6 +90,9 @@
     background: none;
     border: none;
     cursor: pointer;
+    color: #ddd;
+    font-weight: 700;
+    font-size: 15px;
 }
 
 @media screen and (min-width: 768px) {

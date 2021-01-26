@@ -7,7 +7,32 @@ import "./Header.css";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { routes } from "../../constants/routes";
 
-export default function Header(props) {
+function Header(props) {
+  const premadeQueries = [
+    "Wallpapers",
+    "Nature",
+    "People",
+    "Architecture",
+    "Current Events",
+    "Business & Work",
+    "Experimental",
+    "Fashion",
+    "Film",
+    "Health & Wellness",
+    "Interiors",
+    "Street Photography",
+    "Technology",
+    "Travel",
+    "Textures & Patterns",
+    "Animals",
+    "Food & Drink",
+    "Athletics",
+    "Spirituality",
+    "Arts & Culture",
+    "History",
+    "View all",
+  ];
+
   return (
     <header className="component-header">
       <div className="flex-icon">
@@ -59,86 +84,19 @@ export default function Header(props) {
       </div>
       <div className="scrolling-wrapper">
         <ul>
-          <button>
-            <li>Wallpapers</li>
-          </button>
-          <button>
-            <li>Nature</li>
-          </button>
-          <button>
-            <li>People</li>
-          </button>
-          <button>
-            <li>Architecture</li>
-          </button>
-          <button>
-            <li>Current Events</li>
-          </button>
-          <button>
-            <li>Experimental</li>
-          </button>
-          <button>
-            <li>Fashion</li>
-          </button>
-          <button>
-            <li>Film</li>
-          </button>
-          <button>
-            <li>Health & Wellness</li>
-          </button>
-          <button>
-            <li>Interiors</li>
-          </button>
-          <button>
-            <li>Street Photography</li>
-          </button>
-          <button>
-            <li>Technology</li>
-          </button>
-          <button>
-            <li>Travel</li>
-          </button>
-          <button>
-            <li>Textures & Patterns</li>
-          </button>
-          <button>
-            <li>Business & Work</li>
-          </button>
-          <button>
-            <li>Animals</li>
-          </button>
-          <button>
-            <li>Food & Drink</li>
-          </button>
-          <button>
-            <li>Athletics</li>
-          </button>
-          <button>
-            <li>Spirituality</li>
-          </button>
-          <button>
-            <li>Arts & Culture</li>
-          </button>
-          <button>
-            <li>History</li>
-          </button>
-          <button>
-            <li>View all</li>
-          </button>
+          {premadeQueries.map((query, i) => {
+            return (
+              <li key={i}>
+                <button onClick={(e) => props.searchPhotos(e, query)}>
+                  {query}
+                </button>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </header>
   );
 }
 
-// const premadeQueries = ["History", "Art", "Basketball", "Tennis", "People"];
-
-// {
-//   premadeQueries.map((query, i) => {
-//     return (
-//       <button onClick={(e) => searchByQuery(query)} key={i}>
-//         <li>{query}</li>
-//       </button>
-//     );
-//   });
-// }
+export default Header;

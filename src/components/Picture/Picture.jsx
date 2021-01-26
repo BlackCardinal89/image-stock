@@ -8,8 +8,6 @@ import "./Picture.css";
 
 function Picture(props) {
 
-  const [like, setLike] = useState([]);
-
   return (
     <div className={props.isGrid ? "grid" : "list"}>
       {props.photos.map((photo) => {
@@ -27,7 +25,7 @@ function Picture(props) {
             </div>
             <div className="photo-buttons">
               <button
-                onClick={() => setLike(like + 1)}
+                onClick={() => props.handleFavoriteClick(photo.id)}
                 className="info-buttons"
               >
                 <img src={favorite_24px} alt="" />
@@ -36,10 +34,8 @@ function Picture(props) {
                 <img src={maximize_2} alt="" />
               </button>
               <button 
+                onClick={() => props.handleCheckoutClick(photo.id)}
                 className="info-buttons"
-                onClick={() => {
-                  
-                }}
               >
                 <img src={shopping_cart} alt="" />
               </button>

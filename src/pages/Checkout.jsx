@@ -1,11 +1,15 @@
 import React from 'react';
+import Picture from '../components/Picture/Picture';
 import './Checkout.css';
 
-function Checkout() {
+function Checkout(props) {
   return (
-    <div>
+    <>
       <h2 className="name-menu">Корзина</h2>
-    </div>
+      <Picture 
+        
+      />
+    </>
   )
 }
 
