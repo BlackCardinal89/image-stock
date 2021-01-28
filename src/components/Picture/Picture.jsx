@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import favorite_24px from "../assets/favorite_24px.png";
 import shopping_cart from "../assets/shopping_cart.png";
 import maximize_2 from "../assets/maximize-2.png";
@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import "./Picture.css";
 
 function Picture(props) {
-
   return (
     <div className={props.isGrid ? "grid" : "list"}>
       {props.photos.map((photo) => {
@@ -31,9 +30,11 @@ function Picture(props) {
                 <img src={favorite_24px} alt="" />
               </button>
               <button className="info-buttons">
-                <img src={maximize_2} alt="" />
+                <Link to={`detailed/${photo.id}`}>
+                  <img src={maximize_2} alt="" />
+                </Link>
               </button>
-              <button 
+              <button
                 onClick={() => props.handleCheckoutClick(photo.id)}
                 className="info-buttons"
               >
@@ -44,7 +45,7 @@ function Picture(props) {
         );
       })}
       <Link to="/" className="button-top">
-          <img src={arrow_up} alt="" />
+        <img src={arrow_up} alt="" />
       </Link>
     </div>
   );
