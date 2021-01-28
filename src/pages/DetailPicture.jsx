@@ -20,11 +20,19 @@ function DetailPicture(props) {
             alt={selectedPhoto?.alt_description}
           />
           <div className="user-photo">
+<<<<<<< HEAD
             <img src={selectedPhoto?.user?.profile_image?.medium} alt="" />
           </div>
           <div className="user-info">
             <h4>{selectedPhoto?.user?.name}</h4>
             <h4>@{selectedPhoto?.user?.username}</h4>
+=======
+            <img src={selectedPhoto?.user?.profile_image?.small} alt="" />
+          </div>
+          <div className="user-info">
+            <h5>{selectedPhoto?.user?.name}</h5>
+            <h6>@{selectedPhoto?.user?.username}</h6>
+>>>>>>> 0a8646a2ab3b849d419b9cfbb81d441049038f69
           </div>
           <img
             className="picture-underground"

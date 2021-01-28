@@ -48,7 +48,11 @@
 
 .photo-info h2, h3, img{
     /* margin-top: 3px; */
+<<<<<<< HEAD
     /* margin-bottom: 3px ; */
+=======
+    margin-bottom: 3px ;
+>>>>>>> 0a8646a2ab3b849d419b9cfbb81d441049038f69
     font-weight: 650;
     color: #fff;
 }
