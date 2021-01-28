@@ -1,0 +1,29 @@
+.fullpicture {
+    text-align: center;
+    display: flex;
+    position: relative;
+}
+
+.fullpicture-background img {
+    backdrop-filter: blur(8px);
+}
+
+.user-photo {
+    display: flex;
+    position: absolute;
+}
+
+.user-photo img {
+    border: 2px solid rgb(255, 0, 0);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+}
+
+.picture-underground {
+    text-align: center;
+}
+

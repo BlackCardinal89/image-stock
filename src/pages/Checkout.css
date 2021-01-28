@@ -5,3 +5,23 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+.button-buy {
+    background-color: #219653;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    margin: auto auto auto 80%;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 7.5px;
+}
+
+.button-buy:hover {
+    cursor: pointer;
+}
+
+.button-buy:active {
+    box-shadow: inset -4px -4px 3px rgba(255, 255, 255, .6),
+                inset 6px 4px 3px rgba(85, 247, 40, 0.6);
+}

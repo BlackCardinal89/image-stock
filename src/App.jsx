@@ -7,6 +7,7 @@ import Home from "./pages/Home.jsx";
 import Favorites from "./pages/Favorites.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import "./App.css";
+import DetailPicture from "./pages/DetailPicture.jsx";
 
 function App() {
   const unsplash = createApi({
@@ -55,13 +56,18 @@ function App() {
 
   const deleteFromFavorites = (id) => {
     const favoritesWithoutTarget = favorites.filter((photo) => photo.id !== id);
-    setFavorites(favoritesWithoutTarget)
+    setFavorites(favoritesWithoutTarget);
   };
 
   const addToCart = (id) => {
     const targetPhoto = photos.find((photo) => photo.id === id);
-    setCheckout([...checkout, targetPhoto])
-  }
+    setCheckout([...checkout, targetPhoto]);
+  };
+
+  const deleteFromCart = (id) => {
+    const cartWithoutTarget = checkout.filter((photo) => photo.id !== id);
+    setCheckout(cartWithoutTarget);
+  };
 
   return (
     <div>
@@ -74,10 +80,11 @@ function App() {
       <Switch>
         <Route exact path={routes.home}>
           <Home
-            handleFavoriteClick={addToFavorites}
             isGrid={isGrid}
             toggleGrid={toggleGrid}
             photos={photos}
+            handleFavoriteClick={addToFavorites}
+            handleCheckoutClick={addToCart}
           />
         </Route>
         <Route path={routes.favorites}>
@@ -86,12 +93,18 @@ function App() {
             toggleGrid={toggleGrid}
             favorites={favorites}
             handleFavoriteClick={deleteFromFavorites}
+            handleCheckoutClick={addToCart}
           />
         </Route>
         <Route path={routes.checkout}>
-          <Checkout 
-            
+          <Checkout
+            checkout={checkout}
+            handleFavoriteClick={addToFavorites}
+            handleCheckoutClick={deleteFromCart}
           />
+        </Route>
+        <Route path={`${routes.detailPicture}/:id`}>
+          <DetailPicture photos={photos} />
         </Route>
       </Switch>
     </div>
