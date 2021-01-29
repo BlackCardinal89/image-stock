@@ -72,7 +72,6 @@ function App() {
   return (
     <div>
       <Header
-        photos={photos}
         searchPhotos={searchPhotos}
         query={query}
         assignQuery={assignQuery}
@@ -104,7 +103,11 @@ function App() {
           />
         </Route>
         <Route path={`${routes.detailPicture}/:id`}>
-          <DetailPicture photos={photos} />
+          <DetailPicture 
+            photos={photos} 
+            handleCheckoutClick={addToCart}
+            handleFavoriteClick={addToFavorites}
+          />
         </Route>
       </Switch>
     </div>
