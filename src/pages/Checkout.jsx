@@ -1,6 +1,5 @@
 import React from "react";
-import { routes } from "../constants/routes";
-import { Route, Switch } from "react-router";
+import { tokenRequest } from "../api/requests";
 import Picture from "../components/Picture/Picture";
 import "./Checkout.css";
 
@@ -13,11 +12,14 @@ function Checkout(props) {
         handleFavoriteClick={props.handleFavoriteClick}
         handleCheckoutClick={props.handleCheckoutClick}
       />
-      <Switch>
-        <Route path={routes}>
-          <input className="button-buy" type="button" value="BUY" />
-        </Route>
-      </Switch>
+      <button
+        onClick={() => {
+          tokenRequest();
+        }}
+        className="button-buy"
+        value="BUY"
+      >BUY
+      </button>
     </>
   );
 }
