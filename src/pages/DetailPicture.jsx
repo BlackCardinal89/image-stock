@@ -8,14 +8,14 @@ function DetailPicture(props) {
   const { id } = useParams();
   const [selectedPhoto, setSelectedPhoto] = useState({});
   const [loading, setLoading] = useState(false);
-  
+
   const loadSelectedPhoto = async () => {
     setLoading(true);
     const targetPhoto = await props.photos.find((photo) => photo.id === id);
     setSelectedPhoto(targetPhoto);
     setLoading(false);
   };
-  
+
   useEffect(() => {
     loadSelectedPhoto();
   }, []);
@@ -35,8 +35,7 @@ function DetailPicture(props) {
                 ? { backgroundImage: `url(${selectedPhoto?.urls?.full} )` }
                 : {}
             }
-          >
-          </div>
+          ></div>
           <div className="fullpicture-content">
             <div className="photo-controls">
               <div id="user-info">
@@ -52,10 +51,14 @@ function DetailPicture(props) {
                 </div>
               </div>
               <div className="button-info">
-                <button onClick={() => props.handleFavoriteClick(selectedPhoto.id)}>
+                <button
+                  onClick={() => props.handleFavoriteClick(selectedPhoto.id)}
+                >
                   <img src={favoritesBtn} alt="" />
                 </button>
-                <button onClick={() => props.handleCheckoutClick(selectedPhoto.id)}>
+                <button
+                  onClick={() => props.handleCheckoutClick(selectedPhoto.id)}
+                >
                   <img src={shopping_cart2} alt="" />
                 </button>
               </div>
@@ -67,8 +70,7 @@ function DetailPicture(props) {
                   ? { backgroundImage: `url(${selectedPhoto?.urls?.full} )` }
                   : {}
               }
-            >
-            </div>
+            ></div>
           </div>
         </div>
       )}
