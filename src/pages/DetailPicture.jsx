@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import favoritesBtn from "../components/assets/favorites.png";
 import shopping_cart2 from "../components/assets/shopping_cart.png";
-import "./DetailPicture.css";
+import "./DetailPicture1.css";
 
 function DetailPicture(props) {
   const { id } = useParams();
