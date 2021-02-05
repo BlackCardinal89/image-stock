@@ -1,6 +1,6 @@
 import React from "react";
 import favorite_24px from "../assets/favorite_24px.png";
-import shopping_cart from "../assets/shopping_cart.png";
+import shopping_cart from "../assets/shopping_cart-64.png";
 import maximize_2 from "../assets/maximize-2.png";
 import arrow_up from "../assets/arrow_up.png";
 import { Link } from "react-router-dom";

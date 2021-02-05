@@ -17,9 +17,10 @@ function Checkout(props) {
           tokenRequest();
         }}
         className="button-buy"
-        // type="button"
         value="BUY"
-      />
+      >
+        BUY
+      </button>
     </>
   );
 }

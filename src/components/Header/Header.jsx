@@ -2,7 +2,7 @@ import React from "react";
 import "unsplash-js";
 import logo from "../assets/logo.png";
 import favorite_24px from "../assets/favorite_24px.png";
-import shopping_cart from "../assets/shopping_cart.png";
+import shopping_cart from "../assets/shopping_cart-64.png";
 import "./Header.css";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { routes } from "../../constants/routes";

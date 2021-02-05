@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import favoritesBtn from "../components/assets/favorites.png";
-import shopping_cart2 from "../components/assets/shopping_cart.png";
+import favoritesBtn from "../components/assets/favorite_24px.png";
+import shopping_cart2 from "../components/assets/shopping_cart-64.png";
 import "./DetailPicture.css";
 
 function DetailPicture(props) {
@@ -35,7 +35,8 @@ function DetailPicture(props) {
                 ? { backgroundImage: `url(${selectedPhoto?.urls?.full} )` }
                 : {}
             }
-          ></div>
+          >
+          </div>
           <div className="fullpicture-content">
             <div className="photo-controls">
               <div id="user-info">
