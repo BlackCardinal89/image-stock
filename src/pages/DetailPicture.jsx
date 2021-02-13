@@ -27,31 +27,30 @@ function DetailPicture(props) {
           <h1>Loading</h1>
         </div>
       ) : (
-        <div className="fulldetail-picture">
+        <div className="picture-content">
           <div
-            className="fullpicture"
+            className="full-background-picture"
             style={
               selectedPhoto
                 ? { backgroundImage: `url(${selectedPhoto?.urls?.full} )` }
                 : {}
             }
-          >
-          </div>
-          <div className="fullpicture-content">
-            <div className="photo-controls">
-              <div id="user-info">
-                <div className="user-photo">
+          ></div>
+          <div className="detail-picture">
+            <div className="picture-controls">
+              <div className="data-user">
+                <div className="avatar-user">
                   <img
                     src={selectedPhoto?.user?.profile_image?.medium}
                     alt=""
                   />
                 </div>
-                <div className="user-info">
+                <div className="info-user">
                   <span>{selectedPhoto?.user?.name}</span>
                   <span>@{selectedPhoto?.user?.username}</span>
                 </div>
               </div>
-              <div className="button-info">
+              <div className="addition-button">
                 <button
                   onClick={() => props.handleFavoriteClick(selectedPhoto.id)}
                 >
@@ -63,15 +62,16 @@ function DetailPicture(props) {
                   <img src={shopping_cart2} alt="" />
                 </button>
               </div>
-            </div>
             <div
-              className="picture-underground"
+              className="small-background-picture"
               style={
                 selectedPhoto
-                  ? { backgroundImage: `url(${selectedPhoto?.urls?.full} )` }
-                  : {}
+                ? { backgroundImage: `url(${selectedPhoto?.urls?.full} )` }
+                : {}
               }
-            ></div>
+              >
+            </div>
+              </div>
           </div>
         </div>
       )}

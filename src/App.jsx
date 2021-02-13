@@ -6,8 +6,8 @@ import Header from "./components/Header/Header.jsx";
 import Home from "./pages/Home.jsx";
 import Favorites from "./pages/Favorites.jsx";
 import Checkout from "./pages/Checkout.jsx";
-import "./App.css";
 import DetailPicture from "./pages/DetailPicture.jsx";
+import "./App.css";
 
 function App() {
   const unsplash = createApi({
@@ -42,7 +42,7 @@ function App() {
     unsplash.search
       .getPhotos({
         query: buttonValue ? buttonValue : query,
-        perPage: 99,
+        perPage: 30,
       })
       .then((data) => {
         setPhotos(data.response?.results);
