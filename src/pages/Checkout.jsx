@@ -1,9 +1,27 @@
-import React from "react";
-import { tokenRequest } from "../api/requests";
+import React, { useEffect, useState } from "react";
+import { tokenRequest, transferToPaymentPage } from "../api/requests";
 import Picture from "../components/Picture/Picture";
 import "./Checkout.css";
 
 function Checkout(props) {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://test-epay.homebank.kz/payform/payment-api.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  });
+  const handleBuyClick = async (amountPayable) => {
+    await transferToPaymentPage(amountPayable);
+  };
+
+  useEffect(() => {
+    let amount = props.checkout.length * 1000;
+    setAmount(amount);
+  }, [props.checkout]);
+
+  const [amount, setAmount] = useState(0);
+
   return (
     <>
       <h2 className="name-menu">Корзина</h2>
@@ -14,11 +32,12 @@ function Checkout(props) {
       />
       <button
         onClick={() => {
-          tokenRequest();
+          handleBuyClick(amount);
         }}
         className="button-buy"
         value="BUY"
-      >BUY
+      >
+        BUY
       </button>
     </>
   );
