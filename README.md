@@ -1,7 +1,4 @@
 RocketFirm Assignment
-Ссылка на живой проект:
-
-
 
 Технологии
 React
