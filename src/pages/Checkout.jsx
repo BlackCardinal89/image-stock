@@ -16,7 +16,7 @@ function Checkout(props) {
   };
 
   useEffect(() => {
-    let amount = props.checkout.length * 1000;
+    let amount = props.checkout.length * 490;
     setAmount(amount);
   }, [props.checkout]);
 
