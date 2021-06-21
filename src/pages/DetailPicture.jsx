@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import favoritesBtn from "../components/assets/favorites.png";
 import shopping_cart2 from "../components/assets/shopping_cart.png";
+import link_1 from "../components/assets/link.png";
+import { Link } from "react-router-dom";
 import "./DetailPicture.css";
 
 function DetailPicture(props) {
@@ -62,6 +64,15 @@ function DetailPicture(props) {
                     <img src={shopping_cart2} alt="" />
                   </button>
                 </div>
+                <div className="button-info">
+                    <button
+                      onClick={() => props.handleCheckoutClick(selectedPhoto.id)}
+                    >
+                      <Link to={`${selectedPhoto?.urls?.full}`}>
+                        <img src={link_1} alt="" />
+                      </Link>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
