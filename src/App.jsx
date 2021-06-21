@@ -20,6 +20,7 @@ function App() {
   const [favorites, setFavorites] = useState([]);
   const [checkout, setCheckout] = useState([]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchPhotos = async () => {
     const data = await unsplash.photos.list();
     setPhotos(data.response.results);
@@ -27,7 +28,7 @@ function App() {
 
   useEffect(() => {
     fetchPhotos();
-  }, []);
+  }, [fetchPhotos]);
 
   const assignQuery = (query) => {
     setQuery(query);

@@ -20,7 +20,8 @@ function DetailPicture(props) {
 
   useEffect(() => {
     loadSelectedPhoto();
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.loadSelectedPhoto]);
 
   return (
     <>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { tokenRequest, transferToPaymentPage } from "../api/requests";
+import { transferToPaymentPage } from "../api/requests";
 import Picture from "../components/Picture/Picture";
 import "./Checkout.css";
 
@@ -18,7 +18,8 @@ function Checkout(props) {
   useEffect(() => {
     let amount = props.checkout.length * 490;
     setAmount(amount);
-  }, [props.checkout]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const [amount, setAmount] = useState(0);
 
